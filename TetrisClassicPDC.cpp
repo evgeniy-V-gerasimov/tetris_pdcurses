@@ -2,35 +2,6 @@
 
 using namespace tetris_pdcurses;
 
-/*
-TetrisClassicPDC::VisitEvent::VisitEvent(TetrisClassicPDC* obj): instance(obj) {} 
-
-
-void TetrisClassicPDC::VisitEvent::operator()( const ContEvent::BlockLanded&){
-	std::set<std::size_t> affected_blocks;
-	affected_blocks = instance->game_field.erase_full_lines();
-	instance->game_field.split_blocks(affected_blocks);
-	//std::cout << "BlockLanded" << '\n';
-}
-void TetrisClassicPDC::VisitEvent::operator()( const ContEvent::CtrlBlockLanded&){
-	//std::cout << "CtrlBlockLanded" << '\n';
-	std::set<std::size_t> affected_blocks;
-	affected_blocks = instance->game_field.erase_full_lines();
-	instance->game_field.split_blocks(affected_blocks);
-	if(not instance->spawnBlock() ) {
-		instance->exit_game = true;
-	}
-}
-void TetrisClassicPDC::VisitEvent::operator()( const ContEvent::BlockSpawned&){
-	std::cout << "BlockSpawned" << '\n';
-}
-void TetrisClassicPDC::VisitEvent::operator()( const ContEvent::Sanitize&){
-	instance->game_field.sanitizeRemoved();
-}
-**/	
-
-
-
 TetrisClassicPDC::TetrisClassicPDC()
 	: game_field(20, 10)
 	, pdc_window_width(40)
